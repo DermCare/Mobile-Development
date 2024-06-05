@@ -24,9 +24,9 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val tvRegister = view.findViewById<TextView>(R.id.tv_register)
+        val tvRegister = view.findViewById<TextView>(R.id.tvRegister)
         tvRegister.setOnClickListener{
-           findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
 
         val ivLoginOrRegister = view.findViewById<AppCompatButton>(R.id.customViewLoginButton)

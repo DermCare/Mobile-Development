@@ -8,7 +8,7 @@
     tools:context=".onboarding.screens.ThirdScreen">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvSkip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="212dp"
@@ -21,18 +21,18 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/ivNext"
         android:layout_width="81dp"
         android:layout_height="45dp"
         android:layout_marginStart="36dp"
         android:src="@drawable/next_button_boarding"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSkip"
+        app:layout_constraintStart_toEndOf="@+id/tvSkip"
+        app:layout_constraintTop_toTopOf="@+id/tvSkip"
         app:layout_constraintVertical_bias="0.434" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/ivShapeOnBoarding3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/vector_3"
@@ -42,11 +42,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/ivOnBoarding3"
         android:layout_width="335dp"
         android:layout_height="630dp"
         android:src="@drawable/onboarding_page_3"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintBottom_toBottomOf="@+id/ivShapeOnBoarding3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +54,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvTitleOnBoarding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView21"
+        android:id="@+id/ivLoading3"
         android:layout_width="108dp"
         android:layout_height="15dp"
         android:layout_marginBottom="144dp"

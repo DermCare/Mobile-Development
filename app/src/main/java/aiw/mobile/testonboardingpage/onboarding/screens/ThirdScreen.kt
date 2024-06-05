@@ -21,14 +21,12 @@ class ThirdScreen : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val next = view.findViewById<AppCompatImageView>(R.id.imageView14)
+        val next = view.findViewById<AppCompatImageView>(R.id.ivNext)
         next?.setOnClickListener {
-            /*val intent = Intent(requireContext(), LoginFragment::class.java)
-            startActivity(intent)*/
             findNavController().navigate(R.id.action_viewPagerFragment_to_loginFragment)
         }
 
-        val skip = view.findViewById<TextView>(R.id.textView)
+        val skip = view.findViewById<TextView>(R.id.tvSkip)
         skip.setOnClickListener {
             findNavController().navigate(R.id.action_viewPagerFragment_to_loginFragment)
         }
