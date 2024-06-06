@@ -3,6 +3,7 @@ package aiw.mobile.view.dashboard
 import aiw.mobile.testonboardingpage.R
 import aiw.mobile.testonboardingpage.databinding.ActivityBottomFragmentBinding
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
@@ -37,5 +38,21 @@ class BottomActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        // Add OnDestinationChangedListener to NavController
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.navigation_camera -> hideBottomNavigation()
+                else -> showBottomNavigation()
+            }
+        }
+    }
+
+    private fun hideBottomNavigation() {
+        binding.navView.visibility = View.GONE
+    }
+
+    private fun showBottomNavigation() {
+        binding.navView.visibility = View.VISIBLE
     }
 }
