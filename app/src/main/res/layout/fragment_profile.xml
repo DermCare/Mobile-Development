@@ -37,15 +37,16 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
         android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
         android:text="Edit Profile"
         android:textColor="@color/white7"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toTopOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="306dp" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -101,7 +102,6 @@
                     android:id="@+id/textViewAge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:fontFamily="@font/montserrat_regular"
                     android:text="Age: 25"
                     android:textColor="@color/black"
