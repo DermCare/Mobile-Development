@@ -1,6 +1,7 @@
 package aiw.mobile.view.dashboard.ui.camera
 
 import aiw.mobile.testonboardingpage.databinding.FragmentCameraBinding
+import aiw.mobile.utils.FileUtils
 import android.Manifest
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -19,9 +20,6 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import java.io.File
-import java.text.SimpleDateFormat
-import java.util.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -43,12 +41,9 @@ class CameraFragment : Fragment() {
         }
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        val cameraViewModel =
-            ViewModelProvider(this)[CameraViewModel::class.java]
+        val cameraViewModel = ViewModelProvider(this)[CameraViewModel::class.java]
 
         _binding = FragmentCameraBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -66,11 +61,9 @@ class CameraFragment : Fragment() {
         return root
     }
 
-    private fun allPermissionsGranted() =
-        ContextCompat.checkSelfPermission(
-            requireContext(),
-            REQUIRED_PERMISSION
-        ) == PackageManager.PERMISSION_GRANTED
+    private fun allPermissionsGranted() = ContextCompat.checkSelfPermission(
+        requireContext(), REQUIRED_PERMISSION
+    ) == PackageManager.PERMISSION_GRANTED
 
     private fun startCamera() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(requireContext())
@@ -93,9 +86,7 @@ class CameraFragment : Fragment() {
                 )
             } catch (exc: Exception) {
                 Toast.makeText(
-                    requireContext(),
-                    "Gagal memunculkan kamera",
-                    Toast.LENGTH_SHORT
+                    requireContext(), "Gagal memunculkan kamera", Toast.LENGTH_SHORT
                 ).show()
                 Log.e(TAG, "startCamera: ${exc.message}")
             }
@@ -103,34 +94,16 @@ class CameraFragment : Fragment() {
     }
 
     private fun takePhoto() {
-        val imageCapture = imageCapture ?: return
+        val imageCapture = imageCapture
 
-        val photoFile = File(
-            requireContext().externalMediaDirs.firstOrNull(),
-            SimpleDateFormat(FILENAME_FORMAT, Locale.US)
-                .format(System.currentTimeMillis()) + ".jpg"
-        )
-
-        val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
-
-        imageCapture.takePicture(
-            outputOptions, ContextCompat.getMainExecutor(requireContext()),
-            object : ImageCapture.OnImageSavedCallback {
-                override fun onError(exc: ImageCaptureException) {
-                    Log.e(TAG, "Photo capture failed: ${exc.message}", exc)
-                }
-
-                override fun onImageSaved(output: ImageCapture.OutputFileResults) {
-                    val savedUri = Uri.fromFile(photoFile)
-                    currentImageUri = savedUri
-                    Toast.makeText(
-                        context,
-                        "Photo capture succeeded: $savedUri",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-            }
-        )
+        FileUtils.takePhoto(requireContext(), imageCapture, { uri ->
+            currentImageUri = uri
+            Toast.makeText(
+                context, "Berhasil Mengambil Gambar: $uri", Toast.LENGTH_SHORT
+            ).show()
+        }, { exc ->
+            Log.e(TAG, "Gagal Mengambil Gambar: ${exc.message}", exc)
+        })
     }
 
     override fun onDestroyView() {
@@ -142,6 +115,5 @@ class CameraFragment : Fragment() {
     companion object {
         private const val TAG = "CameraFragment"
         private const val REQUIRED_PERMISSION = Manifest.permission.CAMERA
-        private const val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
     }
 }
