@@ -2,7 +2,9 @@ package aiw.mobile.view.dashboard.ui.camera
 
 import aiw.mobile.testonboardingpage.databinding.FragmentCameraBinding
 import aiw.mobile.utils.FileUtils
+import aiw.mobile.view.result.ResultActivity
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
@@ -14,7 +16,6 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageCapture
-import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
@@ -40,10 +41,20 @@ class CameraFragment : Fragment() {
             }
         }
 
+    private val pickFromGalleryLauncher =
+        registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+            uri?.let {
+                navigateToResultPage(it)
+            }
+        }
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View {
-        val cameraViewModel = ViewModelProvider(this)[CameraViewModel::class.java]
+        val cameraViewModel =
+            ViewModelProvider(this)[CameraViewModel::class.java]
 
         _binding = FragmentCameraBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -57,13 +68,16 @@ class CameraFragment : Fragment() {
         cameraExecutor = Executors.newSingleThreadExecutor()
 
         binding.ivCaptureButton.setOnClickListener { takePhoto() }
+        binding.ivPickFromGallery.setOnClickListener { pickFromGallery() }
 
         return root
     }
 
-    private fun allPermissionsGranted() = ContextCompat.checkSelfPermission(
-        requireContext(), REQUIRED_PERMISSION
-    ) == PackageManager.PERMISSION_GRANTED
+    private fun allPermissionsGranted() =
+        ContextCompat.checkSelfPermission(
+            requireContext(),
+            REQUIRED_PERMISSION
+        ) == PackageManager.PERMISSION_GRANTED
 
     private fun startCamera() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(requireContext())
@@ -86,7 +100,9 @@ class CameraFragment : Fragment() {
                 )
             } catch (exc: Exception) {
                 Toast.makeText(
-                    requireContext(), "Gagal memunculkan kamera", Toast.LENGTH_SHORT
+                    requireContext(),
+                    "Gagal memunculkan kamera",
+                    Toast.LENGTH_SHORT
                 ).show()
                 Log.e(TAG, "startCamera: ${exc.message}")
             }
@@ -94,16 +110,28 @@ class CameraFragment : Fragment() {
     }
 
     private fun takePhoto() {
-        val imageCapture = imageCapture
+        FileUtils.takePhoto(
+            requireContext(),
+            imageCapture,
+            onImageSaved = { uri ->
+                currentImageUri = uri
+                navigateToResultPage(uri)
+            },
+            onError = { exc ->
+                Log.e(TAG, "Gagal mengambil foto: ${exc.message}", exc)
+            }
+        )
+    }
 
-        FileUtils.takePhoto(requireContext(), imageCapture, { uri ->
-            currentImageUri = uri
-            Toast.makeText(
-                context, "Berhasil Mengambil Gambar: $uri", Toast.LENGTH_SHORT
-            ).show()
-        }, { exc ->
-            Log.e(TAG, "Gagal Mengambil Gambar: ${exc.message}", exc)
-        })
+    private fun pickFromGallery() {
+        pickFromGalleryLauncher.launch("image/*")
+    }
+
+    private fun navigateToResultPage(imageUri: Uri) {
+        val intent = Intent(requireContext(), ResultActivity::class.java).apply {
+            putExtra("IMAGE_URI", imageUri.toString())
+        }
+        startActivity(intent)
     }
 
     override fun onDestroyView() {

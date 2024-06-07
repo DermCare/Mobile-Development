@@ -25,7 +25,7 @@ class TypeOfDiseasesActivity : AppCompatActivity() {
             insets
         }
 
-        val backButton = binding.imageView13
+        val backButton = binding.ivBack
         backButton.setOnClickListener {
             val intent = Intent(this, CameraFragment::class.java)
             startActivity(intent)
