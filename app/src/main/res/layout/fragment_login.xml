@@ -72,7 +72,6 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvForgetPassword">
-
     </aiw.mobile.view.custom_view.CustomViewLoginButton>
 
     <TextView
