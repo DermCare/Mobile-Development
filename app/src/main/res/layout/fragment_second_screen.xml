@@ -59,7 +59,7 @@
         android:layout_marginTop="64dp"
         android:fontFamily="@font/montserrat_semi_bold"
         android:gravity="center"
-        android:text="Tinggal duduk manis\ntrus scan pake DermCare"
+        android:text="Just sit tight \nthen scan using DermCare"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

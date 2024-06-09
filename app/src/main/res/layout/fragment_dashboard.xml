@@ -99,6 +99,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,10 +111,10 @@
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/buttonAll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0"
                 android:background="@drawable/bg_scroll"
                 android:layout_margin="3dp"
                 android:fontFamily="@font/montserrat_medium"
