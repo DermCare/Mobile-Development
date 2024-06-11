@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Permasalahan kulit\nbikin kerjaan numpuk"
+        android:text="Skin problems \nmake work pile up"
         android:fontFamily="@font/montserrat_semi_bold"
         android:textSize="20sp"
         android:textColor="@color/white"

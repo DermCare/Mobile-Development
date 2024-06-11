@@ -7,15 +7,11 @@
     android:background="@color/background"
     tools:context=".onboarding.SplashFragment">
 
-
-    <TextView
-        android:id="@+id/tvDermCareTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DermCare"
-        android:fontFamily="@font/montserrat_bold"
-        android:textSize="34sp"
-        android:textColor="@color/white7"
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="417dp"
+        android:layout_height="567dp"
+        android:src="@drawable/logo_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

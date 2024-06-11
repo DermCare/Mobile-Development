@@ -17,8 +17,16 @@
         android:theme="@style/Theme.TestOnBoardingPage"
         tools:targetApi="31">
         <activity
+            android:name="aiw.mobile.view.dashboard.ui.profile.EditProfileActivity"
+            android:exported="false" />
+        <activity
             android:name="aiw.mobile.view.result.ResultActivity"
             android:exported="false" />
+        <activity
+            android:name="aiw.mobile.view.detail.diseases.DetailDiseasesActivity"
+            android:exported="false" />
+        <activity android:name="aiw.mobile.view.detail.drugs.DetailDrugsActivity"
+            android:exported="false"/>
         <activity
             android:name="aiw.mobile.view.dashboard.BottomActivity"
             android:exported="false"

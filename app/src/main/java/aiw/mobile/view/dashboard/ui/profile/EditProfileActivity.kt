@@ -1,23 +1,21 @@
-package aiw.mobile.view.type_of_diseases
+package aiw.mobile.view.dashboard.ui.profile
 
-import aiw.mobile.testonboardingpage.R
-import aiw.mobile.testonboardingpage.databinding.ActivityTypeOfDiseasesBinding
-import aiw.mobile.view.dashboard.ui.camera.CameraFragment
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import aiw.mobile.testonboardingpage.R
+import aiw.mobile.testonboardingpage.databinding.ActivityEditProfileBinding
+import android.content.Intent
 
-class TypeOfDiseasesActivity : AppCompatActivity() {
+class EditProfileActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityTypeOfDiseasesBinding
-
+    private lateinit var binding: ActivityEditProfileBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityTypeOfDiseasesBinding.inflate(layoutInflater)
+        binding = ActivityEditProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -25,9 +23,8 @@ class TypeOfDiseasesActivity : AppCompatActivity() {
             insets
         }
 
-        val backButton = binding.ivBackTypeOfDiseases
-        backButton.setOnClickListener {
-            val intent = Intent(this, CameraFragment::class.java)
+        binding.ivBackEditProfile.setOnClickListener {
+            val intent = Intent(this, ProfileFragment::class.java)
             startActivity(intent)
         }
     }

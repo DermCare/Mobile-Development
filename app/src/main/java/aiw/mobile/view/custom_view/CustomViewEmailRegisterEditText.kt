@@ -22,18 +22,11 @@ class CustomViewEmailRegisterEditText @JvmOverloads constructor(
         // Mengatur background warna putih
         setBackgroundColor(ContextCompat.getColor(context, android.R.color.white))
 
-        // Menghilangkan garis bawah
-        /*background = null*/
-
         // Mengatur Font Family
         typeface = ResourcesCompat.getFont(context, R.font.montserrat_medium)
 
         // Mengatur Size
         textSize = 12f
-
-        // Menentukan ukuran ikon (misalnya, 24dp)
-        /*val iconSize = context.resources.getDimensionPixelSize(R.dimen.icon_size)
-        iconEmail.setBounds(0, 0, iconSize, iconSize)*/
 
         // Mengatur background rounded
         background = ContextCompat.getDrawable(context, R.drawable.rounded_shape)
@@ -42,7 +35,10 @@ class CustomViewEmailRegisterEditText @JvmOverloads constructor(
         setCompoundDrawablesWithIntrinsicBounds(null, null, iconEmail, null)
 
         // Menambahkan padding agar ikon tidak terlalu dekat dengan teks
-        compoundDrawablePadding = 16 // ganti dengan nilai padding yang diinginkan
+        compoundDrawablePadding = 16
+
+        // Mengatur warna hint
+        setHintTextColor(ContextCompat.getColor(context, R.color.hintColor))
     }
 
     override fun onDraw(canvas: Canvas) {

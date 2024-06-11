@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="aiw.mobile.view.detail.disesases.DetailDiasesActivity">
+    android:background="@color/white"
+    tools:context="aiw.mobile.view.detail.diseases.DetailDiseasesActivity">
 
     <TextView
         android:id="@+id/tvResult"

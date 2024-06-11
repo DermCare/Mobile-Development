@@ -14,10 +14,10 @@ class CustomViewConfirmPasswordRegisterEditText @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
 ) : AppCompatEditText(context, attrs) {
 
-    private var iconEmail: Drawable
+    private var iconPassword: Drawable
 
     init {
-        iconEmail = ContextCompat.getDrawable(context, R.drawable.email_icon) as Drawable
+        iconPassword = ContextCompat.getDrawable(context, R.drawable.eyes_close_icon) as Drawable
 
         // Mengatur background warna putih
         setBackgroundColor(ContextCompat.getColor(context, android.R.color.white))
@@ -39,10 +39,13 @@ class CustomViewConfirmPasswordRegisterEditText @JvmOverloads constructor(
         background = ContextCompat.getDrawable(context, R.drawable.rounded_shape)
 
         // Menambahkan ikon di sebelah kanan EditText
-        setCompoundDrawablesWithIntrinsicBounds(null, null, iconEmail, null)
+        setCompoundDrawablesWithIntrinsicBounds(null, null, iconPassword, null)
 
         // Menambahkan padding agar ikon tidak terlalu dekat dengan teks
-        compoundDrawablePadding = 16 // ganti dengan nilai padding yang diinginkan
+        compoundDrawablePadding = 16
+
+        // Mengatur warna hint
+        setHintTextColor(ContextCompat.getColor(context, R.color.hintColor))
     }
 
     override fun onDraw(canvas: Canvas) {

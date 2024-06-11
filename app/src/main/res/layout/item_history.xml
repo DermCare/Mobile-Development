@@ -21,20 +21,29 @@
             android:id="@+id/tvMedicineDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="History"
+            android:text="History#001"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="12sp"
+            android:textColor="@color/white7"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
             android:id="@+id/textView14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hasil : Normal" />
+            android:text="Hasil : Normal"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/textView15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tanggal" />
+            android:text="Tanggal"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="10sp"
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 
