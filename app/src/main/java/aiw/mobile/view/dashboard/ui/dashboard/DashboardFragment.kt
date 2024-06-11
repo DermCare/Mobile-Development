@@ -26,7 +26,7 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val banner = binding.imageView15
+        val banner = binding.ivBanner
         banner.setOnClickListener {
             val intent = Intent(requireContext(), TypeOfDiseasesActivity::class.java)
             startActivity(intent)

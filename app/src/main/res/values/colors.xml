@@ -17,4 +17,5 @@
     <color name="white13">#0A0A21</color>
     <color name="white14">#02020B</color>
     <color name="black">#000000</color>
+    <color name="hintColor">#50000000</color>
 </resources>
