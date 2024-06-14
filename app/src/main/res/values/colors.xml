@@ -18,4 +18,5 @@
     <color name="white14">#02020B</color>
     <color name="black">#000000</color>
     <color name="hintColor">#50000000</color>
+    <color name="red">#D60006</color>
 </resources>

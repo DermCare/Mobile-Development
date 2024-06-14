@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/background"
     tools:context="aiw.mobile.view.type_of_diseases.TypeOfDiseasesActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -68,9 +68,10 @@
 
                 <TextView
                     android:id="@+id/textView17"
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:paddingTop="10dp"
                     android:fontFamily="@font/montserrat_bold"
                     android:text="Aldy Imam Wijaya"
                     android:textColor="@color/black"
@@ -79,7 +80,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="0"
                     android:orientation="horizontal">
 
                     <TextView
@@ -107,6 +108,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:paddingTop="10dp"
                     android:fontFamily="@font/montserrat_medium"
                     android:text="Sumbersari Gang 4 No. 261\nLowokwaru, Malang"
                     android:textColor="@color/black"
@@ -130,44 +132,56 @@
             android:id="@+id/textView20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="History"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/montserrat_bold"
+            android:text="History"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/ivLanguage"
-            app:layout_constraintTop_toBottomOf="@+id/ivLanguage" />
+            app:layout_constraintStart_toStartOf="@+id/ivAbout"
+            app:layout_constraintTop_toBottomOf="@+id/ivAbout" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView2"
-            android:layout_width="410dp"
-            android:layout_height="131dp"
+            android:layout_width="411dp"
+            android:layout_height="154dp"
             android:layout_marginTop="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView20"
             tools:listitem="@layout/item_history" />
 
+        <ImageView
+            android:id="@+id/ivHistoryTransaction"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="@+id/ivLanguage"
+            app:layout_constraintTop_toBottomOf="@+id/ivLanguage"
+            app:srcCompat="@drawable/transaction_button" />
+
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/tvLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Transaction"
-            android:fontFamily="@font/montserrat_bold"
-            android:textColor="@color/black"
+            android:text="Logout"
+            android:fontFamily="@font/montserrat_regular"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/textView20"
+            android:textColor="@color/red"
+            app:layout_constraintEnd_toEndOf="@+id/recyclerView2"
+            app:layout_constraintStart_toStartOf="@+id/recyclerView2"
             app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="409dp"
-            android:layout_height="224dp"
-            android:layout_marginTop="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+        <ImageView
+            android:id="@+id/ivAbout"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/ivHistoryTransaction"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ivHistoryTransaction"
+            app:layout_constraintTop_toBottomOf="@+id/ivHistoryTransaction"
+            app:srcCompat="@drawable/about_button" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

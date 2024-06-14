@@ -1,4 +1,4 @@
-package aiw.mobile.view.detail.drugs
+package aiw.mobile.view.about
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -6,27 +6,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import aiw.mobile.testonboardingpage.R
-import aiw.mobile.testonboardingpage.databinding.ActivityDetailDrugsBinding
-import aiw.mobile.view.transaction.TransactionActivity
-import android.content.Intent
+import aiw.mobile.testonboardingpage.databinding.ActivityAboutBinding
 
-class DetailDrugsActivity : AppCompatActivity() {
+class AboutActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityDetailDrugsBinding
+    private lateinit var binding: ActivityAboutBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityDetailDrugsBinding.inflate(layoutInflater)
+        binding = ActivityAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
-
-        binding.ivBuy.setOnClickListener {
-            val intent = Intent(this, TransactionActivity::class.java)
-            startActivity(intent)
         }
     }
 }
