@@ -17,6 +17,15 @@
         android:theme="@style/Theme.TestOnBoardingPage"
         tools:targetApi="31">
         <activity
+            android:name="aiw.mobile.view.about.AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name="aiw.mobile.view.transaction.TransactionActivity"
+            android:exported="false" />
+        <activity
+            android:name="aiw.mobile.view.transaction.HistoryTransactionActivity"
+            android:exported="false" />
+        <activity
             android:name="aiw.mobile.view.dashboard.ui.profile.EditProfileActivity"
             android:exported="false" />
         <activity
@@ -25,8 +34,9 @@
         <activity
             android:name="aiw.mobile.view.detail.diseases.DetailDiseasesActivity"
             android:exported="false" />
-        <activity android:name="aiw.mobile.view.detail.drugs.DetailDrugsActivity"
-            android:exported="false"/>
+        <activity
+            android:name="aiw.mobile.view.detail.drugs.DetailDrugsActivity"
+            android:exported="false" />
         <activity
             android:name="aiw.mobile.view.dashboard.BottomActivity"
             android:exported="false"

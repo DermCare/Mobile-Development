@@ -1,6 +1,7 @@
 package aiw.mobile.view.dashboard.ui.profile
 
 import aiw.mobile.testonboardingpage.databinding.FragmentProfileBinding
+import aiw.mobile.view.transaction.HistoryTransactionActivity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -34,6 +35,11 @@ class ProfileFragment : Fragment() {
 
         binding.ivLanguage.setOnClickListener {
             Toast.makeText(requireContext(), "Fitur masih dalam tahap pengembangan", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.ivHistoryTransaction.setOnClickListener {
+            val intent = Intent(requireContext(), HistoryTransactionActivity::class.java)
+            startActivity(intent)
         }
 
         return root
