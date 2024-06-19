@@ -1,0 +1,13 @@
+{
+  "error": false,
+  "message": "Users Load Successfully",
+  "payload": {
+    "password": "$2b$10$9SqvnikhLbtVV8SJXaSFD.nMw946ZB9V8/VUaPuqnYYBlyxiRJkcq",
+    "id": "e1cdf6ed-366c-4c41-8672-f834311e9e45",
+    "email": "test@gmail.com",
+    "username": "test123",
+    "name" : "Testing Name",
+    "gender": "male",
+    "age": "21"
+  }
+}

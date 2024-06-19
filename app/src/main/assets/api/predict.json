@@ -1,0 +1,17 @@
+{
+  "error": false,
+  "message": "Berhasil prediksi gambar",
+  "payload": {
+    "id": "339d7958-793a-4ab8-abcf-d1d5a332a8bb",
+    "result": "Actinic Keratosis",
+    "score": 99.99998807907104,
+    "createdAt": "2024-06-10T02:51:52.626Z",
+    "image": "https://storage.googleapis.com/dermcare-model-bucket/339d7958-793a-4ab8-abcf-d1d5a332a8bb.jpg",
+    "drug": {
+      "drug_img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/100/MTA-158500565/no-brand_no-brand_full03.jpg",
+      "drug_name": "Imiquimod",
+      "drug_type": "Topical Cream",
+      "desc": "Actinic keratosis is a rough, scaly patch on the skin caused by years of sun exposure. It often appears on the face, lips, ears, back of hands, forearms, scalp, or neck. Symptoms include rough, dry, or scaly areas that may be pink, red, or flesh-colored."
+    }
+  }
+}

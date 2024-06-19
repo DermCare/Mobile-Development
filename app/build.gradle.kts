@@ -1,24 +1,22 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
-    namespace = "aiw.mobile.testonboardingpage"
+    namespace = "com.dermcare.android"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "aiw.mobile.testonboardingpage"
+        applicationId = "com.dermcare.android"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildFeatures{
-        viewBinding = true
+        buildConfigField("String", "BASE_URL", "\"https://web-server-q32t45mrsa-et.a.run.app/\"")
     }
 
     buildTypes {
@@ -37,26 +35,36 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
 }
 
 dependencies {
-    // CAMERA X
-    implementation(libs.androidx.camera.camera2)
-    implementation(libs.camera.lifecycle)
-    implementation(libs.camera.view)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
-    implementation(libs.androidx.cardview)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.filament.android)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.preferences)
+    implementation(libs.androidx.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.bumptech.glide)
+
+    implementation(libs.squareup.retrofit)
+    implementation(libs.squareup.converter.gson)
+    implementation(libs.squareup.logging.interceptor)
+
+    implementation(libs.androidx.camera.camera2)
+    implementation(libs.camera.lifecycle)
+    implementation(libs.camera.view)
+    implementation(libs.circleview)
 }

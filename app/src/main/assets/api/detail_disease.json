@@ -1,0 +1,10 @@
+{
+    "error": false,
+    "message": "Berhasil menampilkan daftar penyakit",
+    "payload": {
+        "id": 1,
+        "name": "Actinic Cheilitis",
+        "desc": "Actinic cheilitis is a precancerous lesion that forms most commonly on the lower lip. Similar to actinic keratosis, actinic cheilitis can undergo malignant transformation leading to squamous cell carcinoma (SCC). SCC on the lips is 11 times as likely to metastasize compared to SCC found on other parts of the body.",
+        "image_link": "https://www.verywellhealth.com/thmb/XG5_bJjhKz62a49kMW_rO-R4wkM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/VWH-DermNetNZ-ActinicCheilitis-01-b24680394cec42b48c533842e53d5c71.jpg"
+    }
+}
