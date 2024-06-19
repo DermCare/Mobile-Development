@@ -24,7 +24,7 @@
     <string name="title_detail">Detail</string>
     <string name="email_error">Must be in a valid email format</string>
     <string name="desc_detail">Ini adalah deskripsi yang panjang</string>
-    <string name="about_dermcare">DermCare adalah lorem ipsum dolor sit amet consectetur. Molestie purus est arcu fermentum massa id massa sit aliquam. Nisl dolor dui quisque malesuada duis purus nisl. Vitae vitae in consequat sit nulla egestas nunc est. Ornare tellus pharetra sodales dignissim.\n\nFacilisi id sagittis lorem leo. Nunc tempus tempor nulla tempus cursus non. Mauris varius enim augue in. At sed ultrices duis vitae ut dignissim. Senectus eu aenean aliquet gravida aliquet fermentum sed viverra risus. \n\nAccumsan integer magnis facilisis massa convallis. In amet condimentum egestas integer vitae nunc vulputate adipiscing. Ornare ornare lectus imperdiet aliquam volutpat justo. Commodo netus ut eget fringilla cras feugiat nunc mi duis.</string>
+    <string name="about_dermcare">DermCare is an  application can provide detection of skin diseases according to the image inputted by the user. /nThen will provide an accurate diagnosis and drug recommendations related to the disease experienced</string>
     <string name="or">Or</string>
     <string name="already_have_an_account">Already Have an Account?</string>
     <string name="title_login">Welcome !</string>
@@ -46,5 +46,6 @@
     <string name="result_score">Result Score</string>
     <string name="hello">Hello !</string>
     <string name="username">Username</string>
+    <string name="designed_by">Designed By</string>
 
 </resources>
