@@ -26,8 +26,17 @@ class ApiConfig {
                 chain.proceed(requestHeaders)
             }
 
+            val interceptor = Interceptor { chain ->
+                val req = chain.request()
+                val requestHeaders = req.newBuilder()
+                    .addHeader("Content-Type", "application/json")
+                    .build()
+                chain.proceed(requestHeaders)
+            }
+
             val client = OkHttpClient.Builder()
                 .addInterceptor(loggingInterceptor)
+                .addInterceptor(interceptor)
                 .addInterceptor(authInterceptor)
                 .addInterceptor(AssetFileInterceptor(context.assets))
                 .build()

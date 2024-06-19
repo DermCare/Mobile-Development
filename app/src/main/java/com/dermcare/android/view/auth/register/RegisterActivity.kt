@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.dermcare.android.R
 import com.dermcare.android.data.ResultData
+import com.dermcare.android.data.model.request.RegisterRequest
 import com.dermcare.android.databinding.ActivityRegisterBinding
 import com.dermcare.android.view.ViewModelFactory
 import com.dermcare.android.view.auth.login.LoginActivity
@@ -47,7 +48,9 @@ class RegisterActivity : AppCompatActivity() {
             val email = binding.edtEmail.text.toString()
             val password = binding.edtPassword.text.toString()
 
-            viewModel.register(username, email, password).observe(this) { result ->
+            val registerRequest = RegisterRequest(username, email, password)
+
+            viewModel.register(registerRequest).observe(this) { result ->
                 if (result != null) {
                     when (result) {
                         is ResultData.Loading -> {

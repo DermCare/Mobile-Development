@@ -5,6 +5,8 @@ import androidx.lifecycle.liveData
 import com.dermcare.android.data.local.pref.onboard.OnboardPreference
 import com.dermcare.android.data.local.pref.user.UserModel
 import com.dermcare.android.data.local.pref.user.UserPreference
+import com.dermcare.android.data.model.request.LoginRequest
+import com.dermcare.android.data.model.request.RegisterRequest
 import com.dermcare.android.data.remote.api.ApiService
 import com.dermcare.android.data.remote.response.DetailDiseaseItem
 import com.dermcare.android.data.remote.response.DetailDiseaseResponse
@@ -47,10 +49,10 @@ class DataRepository private constructor(
         userPreference.logout()
     }
 
-    fun register(username: String, email: String, password: String) = liveData {
+    fun register(registerRequest: RegisterRequest) = liveData {
         emit(ResultData.Loading)
         try {
-            val data = apiService.register(username, email, password)
+            val data = apiService.register(registerRequest)
             emit(ResultData.Success(data))
         } catch (e: HttpException) {
             val errorBody = e.response()?.errorBody()?.string()
@@ -59,13 +61,13 @@ class DataRepository private constructor(
         }
     }
 
-    fun login(email: String, password: String) = liveData {
+    fun login(loginRequest: LoginRequest) = liveData {
         emit(ResultData.Loading)
         try {
-            val data = apiService.login(email, password)
+            val data = apiService.login(loginRequest)
             val userModel = UserModel(
                 username = data.loginItem.username,
-                email = email,
+                email = loginRequest.email,
                 token = data.loginItem.token,
                 isLogin = true
             )

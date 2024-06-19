@@ -6,6 +6,7 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.dermcare.android.data.DataRepository
 import com.dermcare.android.data.local.pref.user.UserModel
+import com.dermcare.android.data.model.request.LoginRequest
 import kotlinx.coroutines.launch
 
 class LoginViewModel(private val repository: DataRepository) : ViewModel() {
@@ -18,7 +19,7 @@ class LoginViewModel(private val repository: DataRepository) : ViewModel() {
         return repository.getSession().asLiveData()
     }
 
-    fun login(email: String, password: String) = repository.login(email, password)
+    fun login(loginRequest: LoginRequest) = repository.login(loginRequest)
 
     fun saveSession(user: UserModel) {
         viewModelScope.launch {

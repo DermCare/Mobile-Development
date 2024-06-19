@@ -8,6 +8,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.dermcare.android.data.ResultData
 import com.dermcare.android.data.local.pref.user.UserModel
+import com.dermcare.android.data.model.request.LoginRequest
 import com.dermcare.android.databinding.ActivityLoginBinding
 import com.dermcare.android.view.ViewModelFactory
 import com.dermcare.android.view.auth.register.RegisterActivity
@@ -57,7 +58,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun sendData(email: String, password: String) {
-        viewModel.login(email, password).observe(this) { result ->
+        val loginRequest = LoginRequest(email, password)
+        viewModel.login(loginRequest).observe(this) { result ->
             when (result) {
                 is ResultData.Loading -> {
                     showLoading(true)
