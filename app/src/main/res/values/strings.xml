@@ -47,5 +47,11 @@
     <string name="hello">Hello !</string>
     <string name="username">Username</string>
     <string name="designed_by">Designed By</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_photo_profile">Edit Photo Profile</string>
+    <string name="save">Save</string>
+    <string name="detail_transaction">Detail Transaction</string>
+    <string name="detail_and_payment">Detail and Payment</string>
+    <string name="paid">Paid</string>
 
 </resources>

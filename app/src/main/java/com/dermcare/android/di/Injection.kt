@@ -14,7 +14,7 @@ object Injection {
         val onboardPref = OnboardPreference.getInstance(context.dataStore)
         val userPref = UserPreference.getInstance(context.dataStore)
         val user = runBlocking { userPref.getSession().first() }
-        val apiService = ApiConfig.getApiService(context, user.token)
+        val apiService = ApiConfig.getApiService(user.token)
         return DataRepository.getInstance(apiService, userPref, onboardPref)
     }
 }

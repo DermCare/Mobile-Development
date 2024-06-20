@@ -16,10 +16,20 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.DermCare"
         tools:targetApi="31">
+        <activity
+            android:name=".view.transaction.detail.StatusActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".view.transaction.detail.DetailTransactionActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".view.main.bottom_nav.profile.update.UpdateProfileActivity"
+            android:exported="false" />
         <activity
             android:name=".view.drug.DrugActivity"
             android:exported="false" />
@@ -37,7 +47,7 @@
             android:exported="false" />
         <activity
             android:name=".view.transaction.TransactionActivity"
-            android:exported="false" />
+            android:exported="false"></activity>
         <activity
             android:name=".view.auth.register.RegisterActivity"
             android:exported="false" />
@@ -49,7 +59,7 @@
             android:exported="false" />
         <activity
             android:name=".view.auth.login.LoginActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

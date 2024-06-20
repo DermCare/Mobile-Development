@@ -3,6 +3,7 @@ package com.dermcare.android.data
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.dermcare.android.data.local.pref.onboard.OnboardPreference
+import com.dermcare.android.data.local.pref.user.UserAdditionalModel
 import com.dermcare.android.data.local.pref.user.UserModel
 import com.dermcare.android.data.local.pref.user.UserPreference
 import com.dermcare.android.data.model.request.LoginRequest
@@ -45,6 +46,14 @@ class DataRepository private constructor(
         return userPreference.getSession()
     }
 
+    suspend fun saveProfile(user: UserAdditionalModel) {
+        userPreference.saveProfileAdditional(user)
+    }
+
+    fun getProfile(): Flow<UserAdditionalModel> {
+        return userPreference.getProfileAdditional()
+    }
+
     suspend fun logout() {
         userPreference.logout()
     }
@@ -81,10 +90,17 @@ class DataRepository private constructor(
     }
 
 
-    fun getUser() = liveData {
+    fun getUser(token: String) = liveData {
         emit(ResultData.Loading)
         try {
-            val data = apiService.getUser()
+            val data = apiService.getUser("Bearer $token")
+            val userProfile = UserAdditionalModel(
+                name = data.payload.username,
+                profilePic = "",
+                age = data.payload.age,
+                gender = data.payload.gender
+            )
+            saveProfile(userProfile)
             emit(ResultData.Success(data))
         } catch (e: HttpException) {
             val errorBody = e.response()?.errorBody()?.string()

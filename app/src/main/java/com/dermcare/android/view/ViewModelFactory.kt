@@ -13,6 +13,7 @@ import com.dermcare.android.view.diseases.DiseasesViewModel
 import com.dermcare.android.view.main.MainViewModel
 import com.dermcare.android.view.main.bottom_nav.home.HomeViewModel
 import com.dermcare.android.view.main.bottom_nav.profile.ProfileViewModel
+import com.dermcare.android.view.main.bottom_nav.profile.update.UpdateProfileViewModel
 
 class ViewModelFactory private constructor(private val dataRepository: DataRepository) :
     ViewModelProvider.NewInstanceFactory() {
@@ -44,6 +45,10 @@ class ViewModelFactory private constructor(private val dataRepository: DataRepos
 
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
             return MainViewModel(dataRepository) as T
+        }
+
+        if (modelClass.isAssignableFrom(UpdateProfileViewModel::class.java)) {
+            return UpdateProfileViewModel(dataRepository) as T
         }
 
         throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

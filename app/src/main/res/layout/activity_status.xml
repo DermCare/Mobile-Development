@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".view.diseases.detail.DetailDiseaseActivity">
+    tools:context=".view.transaction.detail.StatusActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/lytAppbar"
@@ -32,70 +32,79 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/drug_detail"
+                android:text="@string/detail_transaction"
                 android:textSize="20sp"
                 android:layout_gravity="center"
                 android:fontFamily="@font/montserrat_bold"
                 android:textColor="@color/black"
-                android:layout_marginStart="20dp"/>
+                android:layout_marginStart="20dp"
+                />
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
     <ImageView
-        android:id="@+id/ivDrug"
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:scaleType="centerCrop"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/sample_photo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lytAppbar"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/tvTitleDrug"
+        android:id="@+id/ivSuccess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_detail"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="16dp"
-        android:textColor="@color/black_2"
-        android:fontFamily="@font/montserrat_semi_bold"
-        android:textSize="16sp"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:src="@drawable/success"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivDrug" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
 
     <TextView
-        android:id="@+id/tvDescDetail"
-        android:layout_width="match_parent"
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/desc_detail"
-        android:layout_marginTop="6dp"
-        android:layout_marginHorizontal="16dp"
-        android:textColor="@color/black_2"
-        android:fontFamily="@font/montserrat_medium"
-        android:textSize="12sp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleDrug"
-        />
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Horay!!\nYour Transaction is Complete!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivSuccess"
+        app:layout_constraintStart_toStartOf="@+id/ivSuccess"
+        app:layout_constraintTop_toBottomOf="@+id/ivSuccess" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/drugButton"
+        android:id="@+id/btnReview"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/blue"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/buy"
+        android:layout_marginHorizontal="32dp"
+        android:text="See Transaction History"
+        android:textSize="12sp"
         android:visibility="visible"
         app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.5"
         tools:visibility="visible" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHome"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/background"
+        app:strokeColor="@color/blue"
+        android:textColor="@color/blue"
+        android:layout_marginHorizontal="32dp"
+        android:text="Back to Home"
+        style="?android:attr/borderlessButtonStyle"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:cornerRadius="12dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnReview"
+        app:layout_constraintVertical_bias="0.4"
+        tools:visibility="visible" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

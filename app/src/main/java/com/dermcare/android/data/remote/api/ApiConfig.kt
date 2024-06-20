@@ -11,19 +11,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiConfig {
     companion object {
-        fun getApiService(context: Context, token: String): ApiService {
+        fun getApiService(token: String): ApiService {
             val loggingInterceptor = if (BuildConfig.DEBUG) {
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
             } else {
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
-            }
-
-            val authInterceptor = Interceptor { chain ->
-                val req = chain.request()
-                val requestHeaders = req.newBuilder()
-                    .addHeader("Authorization", "Bearer $token")
-                    .build()
-                chain.proceed(requestHeaders)
             }
 
             val interceptor = Interceptor { chain ->
@@ -34,11 +26,19 @@ class ApiConfig {
                 chain.proceed(requestHeaders)
             }
 
+            val authInterceptor = Interceptor { chain ->
+                val req = chain.request()
+                val requestHeaders = req.newBuilder()
+                    .addHeader("Authorization", "Bearer $token")
+                    .build()
+                chain.proceed(requestHeaders)
+            }
+
             val client = OkHttpClient.Builder()
                 .addInterceptor(loggingInterceptor)
                 .addInterceptor(interceptor)
                 .addInterceptor(authInterceptor)
-                .addInterceptor(AssetFileInterceptor(context.assets))
+//                .addInterceptor(AssetFileInterceptor(context.assets))
                 .build()
             val retrofit = Retrofit.Builder()
                 .baseUrl(BuildConfig.BASE_URL)

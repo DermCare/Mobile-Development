@@ -34,6 +34,27 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         }
     }
 
+    suspend fun saveProfileAdditional(user: UserAdditionalModel) {
+        dataStore.edit { preference ->
+            preference[NAME_KEY] = user.name
+            preference[PROFILE_PIC_KEY] = user.profilePic
+            preference[AGE_KEY] = user.age
+            preference[GENDER_KEY] = user.gender
+        }
+    }
+
+    fun getProfileAdditional() : Flow<UserAdditionalModel> {
+        return dataStore.data.map { preferences ->
+            UserAdditionalModel(
+                preferences[NAME_KEY] ?: "",
+                preferences[PROFILE_PIC_KEY] ?: "",
+                preferences[AGE_KEY] ?: "",
+                preferences[GENDER_KEY] ?: ""
+
+            )
+        }
+    }
+
     suspend fun logout() {
         dataStore.edit { preferences ->
             preferences.clear()
@@ -48,6 +69,11 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         private val EMAIL_KEY = stringPreferencesKey("email")
         private val TOKEN_KEY = stringPreferencesKey("token")
         private val IS_LOGIN_KEY = booleanPreferencesKey("isLogin")
+
+        private val PROFILE_PIC_KEY = stringPreferencesKey("pic")
+        private val NAME_KEY = stringPreferencesKey("name")
+        private val AGE_KEY = stringPreferencesKey("age")
+        private val GENDER_KEY = stringPreferencesKey("gender")
 
         fun getInstance(dataStore: DataStore<Preferences>): UserPreference {
             return INSTANCE ?: synchronized(this) {

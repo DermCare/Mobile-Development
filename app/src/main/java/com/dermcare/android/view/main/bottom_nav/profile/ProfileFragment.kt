@@ -21,6 +21,7 @@ import com.dermcare.android.view.ViewModelFactory
 import com.dermcare.android.view.about.AboutActivity
 import com.dermcare.android.view.auth.login.LoginActivity
 import com.dermcare.android.view.predict.PredictActivity
+import com.dermcare.android.view.transaction.TransactionActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class ProfileFragment : Fragment() {
@@ -43,6 +44,10 @@ class ProfileFragment : Fragment() {
 
         binding.lytAbout.setOnClickListener {
             startActivity(Intent(requireActivity(), AboutActivity::class.java))
+        }
+
+        binding.cvHistory.setOnClickListener {
+            startActivity(Intent(requireActivity(), TransactionActivity::class.java))
         }
 
         binding.cvLanguage.setOnClickListener {

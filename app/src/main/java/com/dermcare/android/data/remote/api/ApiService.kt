@@ -9,6 +9,7 @@ import retrofit2.http.DELETE
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.Headers
 import retrofit2.http.Multipart
 import retrofit2.http.POST
@@ -32,7 +33,9 @@ interface ApiService {
 
 
     @GET("user")
-    suspend fun getUser(): UserResponse
+    suspend fun getUser(
+        @Header("Authorization") token: String
+    ): UserResponse
 
     @GET("user/histories")
     suspend fun getHistory(): HistoryResponse
