@@ -1,5 +1,7 @@
 # DermCare
 
+![ALT TEXT](https://github.com/DermCare/Mobile-Development/blob/main/dermcare.png)
+
 ## Introduction
 
 **DermCare** is a health application designed to help users detect and treat various skin diseases. This application provides a diagnosis based on scanning results accompanied by treatment recommendations.
