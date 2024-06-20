@@ -21,6 +21,7 @@ import retrofit2.http.Query
 interface ApiService {
 
     @POST("register")
+//    @POST("assets/register")
     suspend fun register(
         @Body registerRequest: RegisterRequest
     ): GeneralResponse
@@ -33,11 +34,13 @@ interface ApiService {
 
 
     @GET("user")
+//    @GET("assets/user")
     suspend fun getUser(
         @Header("Authorization") token: String
     ): UserResponse
 
     @GET("user/histories")
+//    @GET("assets/history")
     suspend fun getHistory(): HistoryResponse
 
     @Multipart
@@ -47,11 +50,13 @@ interface ApiService {
     ): PredictResponse
 
     @GET("medicine")
+//    @GET("assets/medicine")
     suspend fun getMedicine(
         @Query("type") type : String? = null,
     ): MedicineResponse
 
     @GET("diseases")
+//    @GET("assets/diseases")
     suspend fun getDiseases(): DiseasesResponse
 
     @GET("diseases/{id}")

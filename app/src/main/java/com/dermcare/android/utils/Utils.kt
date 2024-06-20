@@ -111,7 +111,7 @@ fun rotateImage(source: Bitmap, angle: Float): Bitmap? {
 fun ImageView.loadImage(url: String) {
     Glide.with(this.context)
         .load(url)
-        .placeholder(R.drawable.sample_photo)
+        .placeholder(R.drawable.placeholder)
         .fitCenter()
         .into(this)
 }

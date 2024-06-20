@@ -3,42 +3,99 @@
   "message": "Histories Load Successfully",
   "payload": [
     {
-      "result": "Actinic Keratosis",
-      "score": 99.99998807907104,
-      "createdAt": "2024-06-10T02:51:52.626Z",
-      "image": "https://storage.googleapis.com/dermcare-model-bucket/339d7958-793a-4ab8-abcf-d1d5a332a8bb.jpg",
-      "id": "339d7958-793a-4ab8-abcf-d1d5a332a8bb",
+      "result": "Tinea",
+      "score": 78.60586643218994,
+      "createdAt": "2024-06-19T14:09:41.516Z",
+      "image": "https://storage.googleapis.com/dermcare-model-bucket/4e477a0a-62db-49fb-b186-305a9fb1ed84.jpg",
+      "id": "4e477a0a-62db-49fb-b186-305a9fb1ed84",
+      "desc": "Tinea is the name of a group of diseases caused by a fungus. Types of tinea include ringworm, athlete's foot and jock itch. These infections are usually not serious, but they can be uncomfortable. You can get them by touching an infected person, from damp surfaces such as shower floors, or even from a pet.",
       "drug": {
-        "drug_name": "Imiquimod",
-        "drug_type": "Topical Cream",
-        "drug_img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/100/MTA-158500565/no-brand_no-brand_full03.jpg",
-        "desc": "Actinic keratosis is a rough, scaly patch on the skin caused by years of sun exposure. It often appears on the face, lips, ears, back of hands, forearms, scalp, or neck. Symptoms include rough, dry, or scaly areas that may be pink, red, or flesh-colored."
+        "drug_name": "Acyclovir ",
+        "drug_type": "Tablet",
+        "drug_img": "https://3.bp.blogspot.com/-DlHqoLItmr0/UgjalzUW_CI/AAAAAAAAA8U/bz5H1-nWswM/s1600/302d2f6450266087921d553d39a89a76.jpg",
+        "desc": "Acyclovir is an agent used to treat infections caused by the herpes simplex virus (HSV). Acyclovir is FDA-approved to treat genital herpes and HSV encephalitis. Non-FDA-approved indications are mucocutaneous HSV, herpes zoster (shingles), and varicella zoster (chickenpox). Acyclovir is the first-line treatment for HSV encephalitis."
       }
     },
     {
       "result": "Actinic Keratosis",
-      "score": 99.99998807907104,
-      "createdAt": "2024-06-10T02:51:52.626Z",
-      "image": "https://storage.googleapis.com/dermcare-model-bucket/339d7958-793a-4ab8-abcf-d1d5a332a8bb.jpg",
-      "id": "339d7958-793a-4ab8-abcf-d1d5a332a8bb",
+      "score": "91.01",
+      "createdAt": "2024-06-19T14:42:02.977Z",
+      "image": "https://storage.googleapis.com/dermcare-model-bucket/775a1a71-4772-42e0-95c7-1dd3806c98f3.jpg",
+      "id": "775a1a71-4772-42e0-95c7-1dd3806c98f3",
+      "desc": "Actinic keratoses are premalignant cutaneous lesions that may progress to squamous cell carcinoma. These lesions commonly appear on sun-exposed areas of the skin in individuals with a history of cumulative sun exposure. Diagnosing actinic keratosis promptly and providing appropriate treatment to mitigate the risk of malignant transformation is crucial.",
       "drug": {
         "drug_name": "Imiquimod",
         "drug_type": "Topical Cream",
         "drug_img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/100/MTA-158500565/no-brand_no-brand_full03.jpg",
-        "desc": "Actinic keratosis is a rough, scaly patch on the skin caused by years of sun exposure. It often appears on the face, lips, ears, back of hands, forearms, scalp, or neck. Symptoms include rough, dry, or scaly areas that may be pink, red, or flesh-colored."
+        "desc": "Imiquimod cream uses your body's own immune system Open a glossary item to help kill the skin cancer cells. It works by releasing a number of chemicals called cytokines Open a glossary item. One of these cytokines is called interferon. Imiquimod cream helps your body's own immune system to produce natural substances which help fight your basal cell carcinoma, actinic keratosis or the virus that has caused your warts."
       }
     },
     {
-      "result": "Actinic Keratosis",
-      "score": 99.99998807907104,
-      "createdAt": "2024-06-10T02:51:52.626Z",
-      "image": "https://storage.googleapis.com/dermcare-model-bucket/339d7958-793a-4ab8-abcf-d1d5a332a8bb.jpg",
-      "id": "339d7958-793a-4ab8-abcf-d1d5a332a8bb",
+      "result": "Herpes",
+      "score": "82.60",
+      "createdAt": "2024-06-20T03:44:33.387Z",
+      "image": "https://storage.googleapis.com/dermcare-model-bucket/7d9658c5-a9a3-4557-a577-eb06837d77dc.jpg",
+      "id": "7d9658c5-a9a3-4557-a577-eb06837d77dc",
+      "desc": "Herpes simplex virus (HSV), known as herpes, is a common infection that can cause painful blisters or ulcers. It primarily spreads by skin-to-skin contact. It is treatable but not curable. Most people have no symptoms or only mild symptoms. The infection can cause painful blisters or ulcers that can recur over time. Medicines can reduce symptoms but can't cure the infection.",
       "drug": {
-        "drug_name": "Imiquimod",
+        "drug_name": "Acyclovir",
+        "drug_type": "Tablet",
+        "drug_img": "https://storage.googleapis.com/rxstorage/Product/Photos/farmaku_acyclovir-200-mg-tablet-kf-02_resize.jpg",
+        "desc": "Acyclovir is an agent used to treat infections caused by the herpes simplex virus (HSV). Acyclovir is FDA-approved to treat genital herpes and HSV encephalitis. Non-FDA-approved indications are mucocutaneous HSV, herpes zoster (shingles), and varicella zoster (chickenpox). Acyclovir is the first-line treatment for HSV encephalitis."
+      }
+    },
+    {
+      "result": "Eczema",
+      "score": "98.94",
+      "createdAt": "2024-06-20T02:20:51.349Z",
+      "image": "https://storage.googleapis.com/dermcare-model-bucket/afabec73-52a8-4a34-ab03-4d7e5263a623.jpg",
+      "id": "afabec73-52a8-4a34-ab03-4d7e5263a623",
+      "desc": "Eczema is a skin condition that causes dry and itchy patches of skin. It's a common condition that isn't contagious. Symptoms of eczema can flare up if you contact an irritant or an allergen. There are treatments available to help you manage symptoms, but there isn't a cure.",
+      "drug": {
+        "drug_name": "Mometasone Furoate",
         "drug_type": "Topical Cream",
-        "drug_img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/100/MTA-158500565/no-brand_no-brand_full03.jpg",
-        "desc": "Actinic keratosis is a rough, scaly patch on the skin caused by years of sun exposure. It often appears on the face, lips, ears, back of hands, forearms, scalp, or neck. Symptoms include rough, dry, or scaly areas that may be pink, red, or flesh-colored."
+        "drug_img": "https://apoteksarahfarma.id/wp-content/uploads/2022/09/mometa.jpg",
+        "desc": "Mometasone Furoate is used to treat skin conditions such as eczema, psoriasis, allergies, and rash. Mometasone decreases swelling (inflammation), itching, and redness. Mometasone is a medium-strength corticosteroid. This medication is available in several forms including cream, ointment, and lotion (solution)."
+      }
+    },
+    {
+      "result": "Eczema",
+      "score": 99.92833733558655,
+      "createdAt": "2024-06-19T12:47:22.507Z",
+      "image": "https://storage.googleapis.com/dermcare-model-bucket/c10e62b6-2406-4b6c-a3e3-7a0fb00a06d0.jpg",
+      "id": "c10e62b6-2406-4b6c-a3e3-7a0fb00a06d0",
+      "desc": "Eczema is a skin condition that causes dry and itchy patches of skin. It's a common condition that isn't contagious. Symptoms of eczema can flare up if you contact an irritant or an allergen. There are treatments available to help you manage symptoms, but there isn't a cure.",
+      "drug": {
+        "drug_name": "Mometasone Furoate",
+        "drug_type": "Topical Cream",
+        "drug_img": "https://apoteksarahfarma.id/wp-content/uploads/2022/09/mometa.jpg",
+        "desc": "Mometasone Furoate is used to treat skin conditions such as eczema, psoriasis, allergies, and rash. Mometasone decreases swelling (inflammation), itching, and redness. Mometasone is a medium-strength corticosteroid. This medication is available in several forms including cream, ointment, and lotion (solution)."
+      }
+    },
+    {
+      "result": "Sun Damaged Skin",
+      "score": 100,
+      "createdAt": "2024-06-19T12:33:14.065Z",
+      "image": "https://storage.googleapis.com/dermcare-model-bucket/e437d3a3-d8cf-4c87-8eae-e84d7e31cf8e.jpg",
+      "id": "e437d3a3-d8cf-4c87-8eae-e84d7e31cf8e",
+      "desc": "Staying out of the sun is the best way to avoid sun-damaged skin. Other precautions include using sunscreen, wearing protective clothing and avoiding sunlight in the middle of the day when UV rays are strongest. Treatment options to repair damaged skin include retinoids, lightening agents, chemical peels, laser skin resurfacing, dermabrasion and fillers.",
+      "drug": {
+        "drug_name": "Terbinafine",
+        "drug_type": "Topical Cream",
+        "drug_img": "https://d2qjkwm11akmwu.cloudfront.net/products/images/4870.jpg",
+        "desc": "Terbinafine is an antifungal medicine. It's used to treat skin infections caused by a fungus (yeast). Terbinafine comes as a cream, gel or spray for treating athlete's foot, ringworm, jock itch, pityriasis versicolor and candidal skin infections. There's also a liquid (solution) for athlete's foot."
+      }
+    },
+    {
+      "result": "Herpes",
+      "score": 100,
+      "createdAt": "2024-06-09T10:35:03.902Z",
+      "image": "https://storage.googleapis.com/dermcare-model-bucket/ed925cc9-ad6f-4b49-8cb6-d06b82e5cecd.jpg",
+      "id": "ed925cc9-ad6f-4b49-8cb6-d06b82e5cecd",
+      "drug": {
+        "drug_name": "Acyclovir ",
+        "drug_img": "https://storage.googleapis.com/rxstorage/Product/Photos/farmaku_acyclovir-200-mg-tablet-kf-02_resize.jpg",
+        "desc": "Herpes is a group of viruses that can cause infection. Herpes virus infections are generally characterized by dry skin, blisters, or open sores that are watery."
       }
     }
   ]

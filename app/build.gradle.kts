@@ -67,4 +67,5 @@ dependencies {
     implementation(libs.camera.lifecycle)
     implementation(libs.camera.view)
     implementation(libs.circleview)
+    implementation(libs.androidx.splashscreen)
 }

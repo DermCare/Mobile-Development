@@ -47,7 +47,7 @@
             android:exported="false" />
         <activity
             android:name=".view.transaction.TransactionActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".view.auth.register.RegisterActivity"
             android:exported="false" />

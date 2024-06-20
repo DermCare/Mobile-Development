@@ -15,6 +15,7 @@ import com.dermcare.android.data.remote.response.DiseasesItem
 import com.dermcare.android.data.remote.response.GeneralResponse
 import com.dermcare.android.data.remote.response.HistoryItem
 import com.dermcare.android.data.remote.response.LoginResponse
+import com.dermcare.android.data.remote.response.MedicineItem
 import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -162,6 +163,18 @@ class DataRepository private constructor(
             emit(ResultData.Error(errorResponse.message))
         }
     }
+
+    fun getMedicine(): LiveData<ResultData<List<MedicineItem>>> =
+        liveData(Dispatchers.IO) {
+            emit(ResultData.Loading)
+            try {
+                val data = apiService.getMedicine()
+                val medicineList = data.payload
+                emit(ResultData.Success(medicineList))
+            } catch (e: Exception) {
+                emit(ResultData.Error(e.message.toString()))
+            }
+        }
 
 
     companion object {

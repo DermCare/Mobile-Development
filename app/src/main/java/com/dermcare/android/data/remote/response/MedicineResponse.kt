@@ -25,6 +25,6 @@ data class MedicineItem(
 	@field:SerializedName("type")
 	val type: String,
 
-	@field:SerializedName("class")
-	val medicineClass: String
+	@field:SerializedName("desc")
+	val desc: String
 )

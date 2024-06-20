@@ -53,5 +53,8 @@
     <string name="detail_transaction">Detail Transaction</string>
     <string name="detail_and_payment">Detail and Payment</string>
     <string name="paid">Paid</string>
+    <string name="recommendation">Recommendation</string>
+    <string name="see">See more</string>
+    <string name="medicine">Medicine</string>
 
 </resources>

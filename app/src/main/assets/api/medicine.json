@@ -1,0 +1,18 @@
+{
+  "error": false,
+  "message": "Berhasil menampilkan obat",
+  "payload": [
+    {
+      "name": "Fluorouracil",
+      "type": "Topical Cream",
+      "desc": "Fluorouracil cream and topical solution are used to treat actinic or solar keratoses (scaly or crusted lesions [skin areas] caused by years of too much exposure to sunlight). Fluorouracil cream and topical solution are also used to treat a type of skin cancer called superficial basal cell carcinoma if usual types of treatment cannot be used. Fluorouracil is in a class of medications called antimetabolites. It works by killing fast-growing cells such as the abnormal cells in actinic keratoses and basal cell carcinoma.",
+      "image": "https://5.imimg.com/data5/SELLER/Default/2022/8/QM/NA/DD/118517374/fluorouracil-cream-usp-1000x1000.jpg"
+    },
+    {
+      "name": "Imiquimod",
+      "type": "Topical Cream",
+      "desc": "Imiquimod cream uses your body's own immune system Open a glossary item to help kill the skin cancer cells. It works by releasing a number of chemicals called cytokines Open a glossary item. One of these cytokines is called interferon. Imiquimod cream helps your body's own immune system to produce natural substances which help fight your basal cell carcinoma, actinic keratosis or the virus that has caused your warts.",
+      "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/100/MTA-158500565/no-brand_no-brand_full03.jpg"
+    }
+  ]
+}
