@@ -10,5 +10,6 @@ data class Predict(
     val score: String?,
     val createdAt: String?,
     val image: String?,
+    val desc: String?,
     val drug: Drug?,
 ) : Parcelable

@@ -85,6 +85,7 @@ class HomeFragment : Fragment() {
                             score = history.score.toString(),
                             createdAt = history.createdAt,
                             image =history.image,
+                            desc = history.desc,
                             drug = Drug(
                                 drugImg = history.drug.drugImg,
                                 drugName = history.drug.drugName,
@@ -105,7 +106,7 @@ class HomeFragment : Fragment() {
 
     private fun setRecycleDataMedicine() {
         viewModel.getMedicine()
-        val layoutManager = LinearLayoutManager(requireContext())
+        val layoutManager = GridLayoutManager(requireContext(),2)
         binding.rvRecommend.layoutManager = layoutManager
         viewModel.medicineList.observe(viewLifecycleOwner) {
             when (it) {

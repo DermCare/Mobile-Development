@@ -118,6 +118,7 @@ class ProfileFragment : Fragment() {
                             score = history.score.toString(),
                             createdAt = history.createdAt,
                             image =history.image,
+                            desc = history.desc,
                             drug = Drug(
                                 drugImg = history.drug.drugImg,
                                 drugName = history.drug.drugName,

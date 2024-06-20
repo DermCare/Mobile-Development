@@ -45,6 +45,7 @@ class PredictActivity : AppCompatActivity() {
             binding.tvTitleDrug.text = predict.drug!!.drugName
             binding.ivDrugRecommend.loadImage(predict.drug.drugImg!!)
             binding.tvDescDrug.text = predict.drug.drugDesc
+            binding.tvSkinDesc.text = predict.desc
 
             drug = predict.drug
 

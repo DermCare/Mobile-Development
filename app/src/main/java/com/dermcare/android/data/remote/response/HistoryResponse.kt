@@ -28,6 +28,9 @@ data class HistoryItem(
 	@field:SerializedName("image")
 	val image: String,
 
+	@field:SerializedName("desc")
+	val desc: String,
+
 	@field:SerializedName("id")
 	val id: String,
 

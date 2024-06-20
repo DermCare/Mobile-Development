@@ -29,7 +29,7 @@
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/title_profile"
-                android:src="@drawable/sample_photo"
+                android:src="@drawable/placeholder"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

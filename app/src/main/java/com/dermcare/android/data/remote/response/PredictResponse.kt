@@ -31,6 +31,9 @@ data class Payload(
 	@field:SerializedName("id")
 	val id: String,
 
+	@field:SerializedName("desc")
+	val desc: String,
+
 	@field:SerializedName("drug")
 	val drug: DrugPredict
 )

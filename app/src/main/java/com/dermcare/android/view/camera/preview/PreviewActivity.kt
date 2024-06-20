@@ -81,6 +81,7 @@ class PreviewActivity : AppCompatActivity() {
                                 score = result.data.payload.score.toString(),
                                 createdAt = result.data.payload.createdAt,
                                 image = result.data.payload.image,
+                                desc= result.data.payload.desc,
                                 drug = Drug(
                                     drugImg = result.data.payload.drug.drugImg,
                                     drugName = result.data.payload.drug.drugName,
