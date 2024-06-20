@@ -36,7 +36,6 @@ interface ApiService {
     @GET("user")
 //    @GET("assets/user")
     suspend fun getUser(
-        @Header("Authorization") token: String
     ): UserResponse
 
     @GET("user/histories")

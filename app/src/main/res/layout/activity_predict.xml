@@ -93,7 +93,7 @@
             android:id="@+id/tvNameResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/desc_detail"
+            android:text="@string/result_name"
             android:layout_marginTop="6dp"
             android:layout_marginHorizontal="16dp"
             android:textColor="@color/black_2"
@@ -103,36 +103,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvSkin"
-            />
-
-        <TextView
-            android:id="@+id/tvSkinDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/your_skin_description"
-            android:layout_margin="16dp"
-            android:textColor="@color/blue"
-            android:fontFamily="@font/montserrat_medium"
-            android:textSize="12sp"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvNameResult" />
-
-        <TextView
-            android:id="@+id/tvResultDesc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/desc_detail"
-            android:layout_marginTop="6dp"
-            android:layout_marginHorizontal="16dp"
-            android:textColor="@color/black_2"
-            android:fontFamily="@font/montserrat_bold"
-            android:textSize="16sp"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvSkinDesc"
             />
 
         <TextView
@@ -147,7 +117,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvResultDesc" />
+            app:layout_constraintTop_toBottomOf="@+id/tvNameResult" />
 
         <TextView
             android:id="@+id/tvScoreResult"
@@ -165,6 +135,39 @@
             app:layout_constraintTop_toBottomOf="@+id/tvScore"
             />
 
+        <TextView
+            android:id="@+id/tvSkinDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_skin_description"
+            android:layout_margin="16dp"
+            android:textColor="@color/blue"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvScoreResult" />
+
+        <TextView
+            android:id="@+id/tvResultDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/result_description"
+            android:layout_marginTop="6dp"
+            android:layout_marginHorizontal="16dp"
+            android:textColor="@color/black3"
+            android:layout_gravity="center_vertical|end"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="14sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSkinDesc"
+            />
+
+
+
         <View
             android:id="@+id/vDash"
             android:layout_width="wrap_content"
@@ -175,7 +178,7 @@
             android:layerType="software"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvScoreResult" />
+            app:layout_constraintTop_toBottomOf="@+id/tvResultDesc" />
 
         <TextView
             android:id="@+id/tvDrugRecommend"

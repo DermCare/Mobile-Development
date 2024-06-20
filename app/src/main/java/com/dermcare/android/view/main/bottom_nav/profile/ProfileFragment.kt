@@ -77,6 +77,7 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.getHistory()
+
         setRecycleData()
     }
 

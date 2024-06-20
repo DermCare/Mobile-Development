@@ -107,6 +107,7 @@ class PreviewActivity : AppCompatActivity() {
 
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+        binding.scanButton.visibility = if (isLoading) View.GONE else View.VISIBLE
     }
 
     private fun showToast(message: String) {

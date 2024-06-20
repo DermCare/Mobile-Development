@@ -28,8 +28,10 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                app:civ_border_color="@color/blue2"
+                app:civ_border_width="1dp"
                 android:contentDescription="@string/title_profile"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/profile_icon"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -41,12 +43,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="@string/profile_name"
+                android:text="dermcare"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_bias="0.3"
                 app:layout_constraintStart_toEndOf="@+id/ivProfile"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
@@ -81,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text="@string/male"
+                    android:text="-"
                     android:textColor="@color/black"
                     android:textSize="12sp" />
 
@@ -116,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text="@string/age_user"
+                    android:text="-"
                     android:textColor="@color/black"
                     android:textSize="12sp" />
 

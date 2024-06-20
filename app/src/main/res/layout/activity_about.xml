@@ -43,40 +43,104 @@
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvAbout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="12dp"
-        app:contentPadding="16dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_medium"
-            android:text="@string/about_dermcare"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:contentPadding="16dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="@string/designed_by"
-        android:fontFamily="@font/montserrat_bold"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/cvAbout"
-        app:layout_constraintTop_toBottomOf="@+id/cvAbout" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/about_dermcare"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
 
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/designed_by"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_azka"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_marginTop="16dp"
+                app:srcCompat="@drawable/azka" />
+
+            <ImageView
+                android:id="@+id/iv_cho"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/cho"
+                android:layout_marginTop="-30dp" />
+
+            <ImageView
+                android:id="@+id/iv_putri"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="-30dp"
+                app:srcCompat="@drawable/putri" />
+
+            <ImageView
+                android:id="@+id/iv_rayhan"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="-30dp"
+                app:srcCompat="@drawable/rayhan" />
+
+            <ImageView
+                android:id="@+id/iv_novia"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="-30dp"
+                app:srcCompat="@drawable/novia" />
+
+            <ImageView
+                android:id="@+id/iv_aldy"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="-30dp"
+                app:srcCompat="@drawable/aldy" />
+
+            <ImageView
+                android:id="@+id/iv_bobi"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="-30dp"
+                app:srcCompat="@drawable/bobi" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

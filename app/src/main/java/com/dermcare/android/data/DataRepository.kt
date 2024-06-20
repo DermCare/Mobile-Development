@@ -1,5 +1,6 @@
 package com.dermcare.android.data
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.dermcare.android.data.local.pref.onboard.OnboardPreference
@@ -91,10 +92,10 @@ class DataRepository private constructor(
     }
 
 
-    fun getUser(token: String) = liveData {
+    fun getUser() = liveData {
         emit(ResultData.Loading)
         try {
-            val data = apiService.getUser("Bearer $token")
+            val data = apiService.getUser()
             val userProfile = UserAdditionalModel(
                 name = data.payload.username,
                 profilePic = "",

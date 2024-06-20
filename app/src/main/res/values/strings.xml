@@ -57,5 +57,7 @@
     <string name="see">See more</string>
     <string name="medicine">Medicine</string>
     <string name="your_skin_description">Your Skin Description</string>
+    <string name="result_name">Result Name</string>
+    <string name="result_description">Result Description</string>
 
 </resources>

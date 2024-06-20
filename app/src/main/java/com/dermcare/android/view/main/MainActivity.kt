@@ -2,6 +2,7 @@ package com.dermcare.android.view.main
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -44,11 +45,11 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-//        viewModel.getSession().observe(this) { user ->
-//            if (!user.isLogin) {
-//                navigateToAuth()
-//            }
-//        }
+        viewModel.getSession().observe(this) { user ->
+           if(user != null) {
+               viewModel.getUser()
+           }
+        }
 
         binding.fab.setOnClickListener {
             startActivity(Intent(this, CameraActivity::class.java))
@@ -56,20 +57,4 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
     }
-
-//    private fun navigateToAuth() {
-//        viewModel.getOnboard().observe(this) { isFirst ->
-//            if (!isFirst) {
-//                startActivity(Intent(this, LoginActivity::class.java).apply {
-//                    flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-//                })
-//            } else {
-//                startActivity(Intent(this, RegisterActivity::class.java).apply {
-//                    flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-//                })
-//            }
-//            finish()
-//        }
-//
-//    }
 }
