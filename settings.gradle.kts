@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TestOnBoardingPage"
+rootProject.name = "DermCare"
 include(":app")
- 

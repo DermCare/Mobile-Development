@@ -1,0 +1,54 @@
+package com.dermcare.android.data.remote.response
+
+import com.google.gson.annotations.SerializedName
+
+data class PredictResponse(
+
+	@field:SerializedName("payload")
+	val payload: Payload,
+
+	@field:SerializedName("error")
+	val error: Boolean,
+
+	@field:SerializedName("message")
+	val message: String
+)
+
+data class Payload(
+
+	@field:SerializedName("result")
+	val result: String,
+
+	@field:SerializedName("score")
+	val score: Any,
+
+	@field:SerializedName("createdAt")
+	val createdAt: String,
+
+	@field:SerializedName("image")
+	val image: String,
+
+	@field:SerializedName("id")
+	val id: String,
+
+	@field:SerializedName("desc")
+	val desc: String,
+
+	@field:SerializedName("drug")
+	val drug: DrugPredict
+)
+
+data class DrugPredict(
+
+	@field:SerializedName("drug_name")
+	val drugName: String,
+
+	@field:SerializedName("drug_type")
+	val drugType: String,
+
+	@field:SerializedName("drug_img")
+	val drugImg: String,
+
+	@field:SerializedName("desc")
+	val desc: String
+)

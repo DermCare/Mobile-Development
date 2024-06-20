@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <!-- CAMERA -->
+
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,40 +16,49 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TestOnBoardingPage"
+        android:theme="@style/Theme.DermCare"
         tools:targetApi="31">
         <activity
-            android:name="aiw.mobile.view.about.AboutActivity"
+            android:name=".view.transaction.detail.StatusActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".view.transaction.detail.DetailTransactionActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".view.main.bottom_nav.profile.update.UpdateProfileActivity"
             android:exported="false" />
         <activity
-            android:name="aiw.mobile.view.transaction.TransactionActivity"
+            android:name=".view.drug.DrugActivity"
             android:exported="false" />
         <activity
-            android:name="aiw.mobile.view.transaction.HistoryTransactionActivity"
+            android:name=".view.predict.PredictActivity"
             android:exported="false" />
         <activity
-            android:name="aiw.mobile.view.dashboard.ui.profile.EditProfileActivity"
+            android:name=".view.diseases.detail.DetailDiseaseActivity"
             android:exported="false" />
         <activity
-            android:name="aiw.mobile.view.result.ResultActivity"
+            android:name=".view.about.AboutActivity"
             android:exported="false" />
         <activity
-            android:name="aiw.mobile.view.detail.diseases.DetailDiseasesActivity"
+            android:name=".view.diseases.DiseasesActivity"
             android:exported="false" />
         <activity
-            android:name="aiw.mobile.view.detail.drugs.DetailDrugsActivity"
+            android:name=".view.transaction.TransactionActivity"
             android:exported="false" />
         <activity
-            android:name="aiw.mobile.view.dashboard.BottomActivity"
-            android:exported="false"
-            android:label="@string/title_activity_bottom_fragment" />
-        <activity
-            android:name="aiw.mobile.view.type_of_diseases.TypeOfDiseasesActivity"
+            android:name=".view.auth.register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.camera.preview.PreviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.camera.CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.auth.login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,6 +66,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".view.main.MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
