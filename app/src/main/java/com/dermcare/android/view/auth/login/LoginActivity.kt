@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.dermcare.android.data.ResultData
 import com.dermcare.android.data.local.pref.user.UserModel
 import com.dermcare.android.data.model.request.LoginRequest
@@ -25,6 +26,9 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
+
+        Thread.sleep(3000)
+        installSplashScreen()
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)

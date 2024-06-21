@@ -52,7 +52,7 @@ class CustomPasswordEditText @JvmOverloads constructor(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        hint = "Password"
+        hint = context.getString(R.string.password)
 //        textAlignment = View.TEXT_ALIGNMENT_TEXT_START
         textAlignment = View.TEXT_ALIGNMENT_VIEW_START
     }

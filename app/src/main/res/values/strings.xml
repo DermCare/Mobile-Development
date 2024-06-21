@@ -5,7 +5,7 @@
     <string name="title_home">Home</string>
     <string name="title_profile">Profile</string>
     <string name="scan">Scan</string>
-    <string name="profile_name">Aldy Imam Wijaya</string>
+    <string name="profile_name">Profile Name</string>
     <string name="gender">Gender</string>
     <string name="male">Male</string>
     <string name="age">Age</string>
@@ -14,16 +14,16 @@
     <string name="language">Language</string>
     <string name="history_transaction">History Transaction</string>
     <string name="arrow_forward">Arrow Forward</string>
-    <string name="about">About</string>
+    <string name="about">About DermCare</string>
     <string name="logout">Logout</string>
     <string name="rejected">Rejected</string>
-    <string name="product">Produk</string>
+    <string name="product">Product</string>
     <string name="history">History</string>
     <string name="title_diseases">Type Of Diseases</string>
     <string name="description_disease">Description Disease</string>
     <string name="title_detail">Detail</string>
     <string name="email_error">Must be in a valid email format</string>
-    <string name="desc_detail">Ini adalah deskripsi yang panjang</string>
+    <string name="desc_detail">This is description detail</string>
     <string name="about_dermcare">DermCare is an  application can provide detection of skin diseases according to the image inputted by the user. /nThen will provide an accurate diagnosis and drug recommendations related to the disease experienced</string>
     <string name="or">Or</string>
     <string name="already_have_an_account">Already Have an Account?</string>
@@ -59,5 +59,14 @@
     <string name="your_skin_description">Your Skin Description</string>
     <string name="result_name">Result Name</string>
     <string name="result_description">Result Description</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="setting_msg_title">"Language Setting"</string>
+    <string name="setting_msg_body">"To change the language, please change the language in your device settings"</string>
+    <string name="setting">"Open Settings"</string>
+    <string name="setting_cancel">"Cancel"</string>
+    <string name="title_status">Hore!!\nYour Transaction is Complete!</string>
+    <string name="see_transaction_history">See Transaction History</string>
+    <string name="back_to_home">Back to Home</string>
 
 </resources>

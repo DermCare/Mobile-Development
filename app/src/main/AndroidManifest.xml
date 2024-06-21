@@ -59,6 +59,7 @@
             android:exported="false" />
         <activity
             android:name=".view.auth.login.LoginActivity"
+            android:theme="@style/Theme.DermCare.Splashscreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

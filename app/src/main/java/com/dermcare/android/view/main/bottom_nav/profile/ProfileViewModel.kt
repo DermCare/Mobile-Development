@@ -25,6 +25,10 @@ class ProfileViewModel(private val repository: DataRepository) : ViewModel() {
         }
     }
 
+    fun getSession(): LiveData<UserModel> {
+        return repository.getSession().asLiveData()
+    }
+
     fun getProfile(): LiveData<UserAdditionalModel> {
         return repository.getProfile().asLiveData()
     }

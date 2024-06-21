@@ -76,6 +76,12 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel.getSession().observe(viewLifecycleOwner) { user ->
+            if(user != null) {
+                binding.tvProfileName.text = user.username
+            }
+        }
+
         viewModel.getHistory()
 
         setRecycleData()
@@ -83,19 +89,19 @@ class ProfileFragment : Fragment() {
 
     private fun showSettingLanguageDialog() {
         val dialogBuilder = MaterialAlertDialogBuilder(requireContext())
-        dialogBuilder.setMessage("To change the language, please change the language in your device settings")
+        dialogBuilder.setMessage(getString(R.string.setting_msg_body))
             .setCancelable(false)
-            .setPositiveButton("Open Settings") { dialog, _ ->
+            .setPositiveButton(getString(R.string.setting)) { dialog, _ ->
                 val intent = Intent(Settings.ACTION_LOCALE_SETTINGS)
                 startActivity(intent)
                 dialog.dismiss()
             }
-            .setNegativeButton("Cancel") { dialog, _ ->
+            .setNegativeButton(getString(R.string.setting_cancel)) { dialog, _ ->
                 dialog.dismiss()
             }
 
         val alert = dialogBuilder.create()
-        alert.setTitle("Language Setting")
+        alert.setTitle(getString(R.string.setting_msg_title))
         alert.show()
     }
 
