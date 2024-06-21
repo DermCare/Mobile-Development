@@ -15,9 +15,9 @@
 - **Banner Type of Diseases**: Contains types of skin diseases.
 - **User Authentication**: Secure login and registration system.
 
-## Figma Design
+## Design
 
-Figma Link : [User Interface](https://www.figma.com/design/IkqDRICHD6NbYwkwP2ApZb/Bangkit-DermCare?node-id=0-1&t=wNHfGJDAoQ1kfxaK-1)
+Link : [User Interface](https://www.figma.com/design/IkqDRICHD6NbYwkwP2ApZb/Bangkit-DermCare?node-id=0-1&t=wNHfGJDAoQ1kfxaK-1)
 
 ## Tech Stack
 
