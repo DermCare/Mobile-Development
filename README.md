@@ -1,6 +1,6 @@
 # DermCare
 
-![ALT TEXT](https://github.com/DermCare/Mobile-Development/blob/bobi/dermcare.png)
+![ALT TEXT](https://github.com/DermCare/Mobile-Development/blob/master/dermcare.png)
 
 ## Introduction
 
